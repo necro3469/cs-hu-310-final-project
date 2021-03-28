@@ -68,6 +68,7 @@ CREATE TABLE IF NOT EXISTS class_registrations(
  class_section_id INT NOT NULL,
  student_id INT NOT NULL UNIQUE,
  grade_id INT,
+ signup_timestamp datetime DEFAULT CURRENT_TIMESTAMP,
  PRIMARY KEY (class_registration_id),
  FOREIGN KEY (class_section_id) REFERENCES class_sections(class_section_id),
  FOREIGN KEY (student_id) REFERENCES students(student_id),
